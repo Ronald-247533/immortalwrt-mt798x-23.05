@@ -589,4 +589,4 @@ define Device/cudy_tr3000-mod
   IMAGES := sysupgrade.tar
   IMAGE/sysupgrade.tar := sysupgrade-tar | append-metadata
 endef
-TARGET_DEVICES += glinet_gl-mt3000
+TARGET_DEVICES += cudy_tr3000-mod
