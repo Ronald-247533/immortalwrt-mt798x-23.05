@@ -586,7 +586,6 @@ define Device/cudy_tr3000-mod
   IMAGE_SIZE := 65536k
   KERNEL_IN_UBI := 1
   DEVICE_PACKAGES := $(MT7981_USB_PKGS)
-  IMAGES := sysupgrade.tar
-  IMAGE/sysupgrade.tar := sysupgrade-tar | append-metadata
+  IMAGE/sysupgrade.bin := sysupgrade-tar | append-metadata
 endef
 TARGET_DEVICES += cudy_tr3000-mod
