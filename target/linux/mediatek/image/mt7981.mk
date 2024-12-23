@@ -571,3 +571,22 @@ define Device/nradio_wt9103_512m
   IMAGE/sysupgrade.bin := sysupgrade-tar | append-metadata
 endef
 TARGET_DEVICES += nradio_wt9103_512m
+
+define Device/cudy_tr3000-mod
+  DEVICE_VENDOR := Cudy
+  DEVICE_MODEL := TR3000
+  DEVICE_VARIANT := mod
+  DEVICE_DTS := mt7981-cudy-tr3000-mod
+  DEVICE_DTS_DIR := $(DTS_DIR)/mediatek
+  SUPPORTED_DEVICES := cudy,tr3000
+  DEVICE_PACKAGES := kmod-hwmon-pwmfan
+  UBINIZE_OPTS := -E 5
+  BLOCKSIZE := 128k
+  PAGESIZE := 2048
+  IMAGE_SIZE := 65536k
+  KERNEL_IN_UBI := 1
+  DEVICE_PACKAGES := $(MT7981_USB_PKGS)
+  IMAGES := sysupgrade.tar
+  IMAGE/sysupgrade.tar := sysupgrade-tar | append-metadata
+endef
+TARGET_DEVICES += glinet_gl-mt3000

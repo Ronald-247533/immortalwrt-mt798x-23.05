@@ -744,6 +744,7 @@ setup_model()
 		MT7986_whnat $num_of_wifi $usbnet
 		;;
 	*mt3000* |\
+	*tr3000* |\
 	glinet,x3000-emmc |\
 	*xe3000* |\
 	*mt2500* |\
